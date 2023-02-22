@@ -37,7 +37,13 @@
          <form>
          
           <div class="input-group mb-3">
-              <textarea class="form-control" id="prompt-input" rows="3" readonly disabled></textarea>
+  
+            
+            <!--Responses-->
+            {% if result %}
+              <textarea class="form-control" id="prompt-input" rows="3" readonly disabled>{{ result }}</textarea>
+            {% endif %}
+          
           </div>
       </form>
         </div>
