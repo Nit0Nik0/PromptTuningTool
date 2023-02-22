@@ -15,4 +15,4 @@ def index():
 def GPT3():
     return render_template("gpt-3.html")
 
-app.run(host="0.0.0.0", port = 5001)
+app.run(host="0.0.0.0", port = 5001, debug=True)

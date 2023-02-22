@@ -2,12 +2,12 @@
 
 ## GPT-3
 
-- [x] fix base.html nav bar
+- [X] fix base.html nav bar
 - [X] Add GPT-3 html file
-- [ ] build out form
-  - [ ] input box
-  - [ ] output box 
-  - [ ] prompt
+- [X] build out form
+  - [X] input box
+  - [X] output box 
+  - [X] prompt
   - [ ] response
   - [x] model
   - [ ] max_tokens

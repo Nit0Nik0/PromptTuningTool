@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% block content %}
 <div class="container-fluid">
-    <div class="row justify-content-center g-2">
+    <div class="row justify-content-center g-2 ">
         <!--Settings page-->
-        <div class="col-4 align-items-center">
+        <div class="col-3 align-items-center border">
             <p class = "h3">Settings:</p>    
         <form>
             <!--Model Selction-->
@@ -19,10 +19,8 @@
                 </select>
               </div>
         </form>
-
-        
         </div>
-        <div class="col-4 align-items-center">
+        <div class="col-4 align-items-center border">
         <!--Input-->
         <p class = "h3">Input Prompt:</p>
         <form>
@@ -34,8 +32,14 @@
         </form>
         </div>
 
-        <div class="col-4 align-items-center">
+        <div class="col-4 align-items-center border">
          <p class = "h3">Output Completion:</p>
+         <form>
+         
+          <div class="input-group mb-3">
+              <textarea class="form-control" id="prompt-input" rows="3" readonly disabled></textarea>
+          </div>
+      </form>
         </div>
 </div>
 {% endblock %}
