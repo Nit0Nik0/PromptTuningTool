@@ -1,51 +1,50 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid">
-    <div class="row justify-content-center g-2 ">
-        <!--Settings page-->
-        <div class="col-3 align-items-center border">
-            <p class = "h3">Settings:</p>    
-        <form>
-            <!--Model Selction-->
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <label class="input-group-text" for="inputGroupSelect01">Model</label>
-                </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                  <option value="text-davinci-003">Davinci</option>
-                  <option value="text-curie-001">Curie</option>
-                  <option value="text-babbage-001">Babbage</option>
-                  <option value="text-ada-001">Ada</option>
-                </select>
-              </div>
-        </form>
-        </div>
-        <div class="col-4 align-items-center border">
-        <!--Input-->
-        <p class = "h3">Input Prompt:</p>
-        <form>
-            <!--Prompt-->
-            <div class="input-group mb-3">
-                <textarea class="form-control" id="prompt-input" rows="3"></textarea>
-                  <button class="btn btn-dark" type="button">Send</button>
-            </div>
-        </form>
+  <div class="row justify-content-center g-2 ">
+    <!--Settings page-->
+    <div class="col-3 align-items-center border">
+      <p class="h3">Settings:</p>
+      <form>
+        <!--Model Selction-->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <label class="input-group-text" for="inputGroupSelect01">Model</label>
+          </div>
+          <select class="custom-select" id="inputGroupSelect01">
+            <option value="text-davinci-003">Davinci</option>
+            <option value="text-curie-001">Curie</option>
+            <option value="text-babbage-001">Babbage</option>
+            <option value="text-ada-001">Ada</option>
+          </select>
         </div>
 
-        <div class="col-4 align-items-center border">
-         <p class = "h3">Output Completion:</p>
-         <form>
-         
-          <div class="input-group mb-3">
-  
-            
-            <!--Responses-->
-            {% if result %}
-              <textarea class="form-control" id="prompt-input" rows="3" readonly disabled>{{ result }}</textarea>
-            {% endif %}
-          
-          </div>
+    </div>
+    <div class="col-4 align-items-center border">
+      <!--Input-->
+      <p class="h3">Input Prompt:</p>
+
+      <!--Prompt-->
+      <div class="input-group mb-3">
+        <textarea class="form-control" id="prompt-input" rows="3"></textarea>
+        <button class="btn btn-dark" type="button">Send</button>
+      </div>
+
+    </div>
+
+    <div class="col-4 align-items-center border">
+      <p class="h3">Output Completion:</p>
+
+
+      <div class="input-group mb-3">
+
+
+        <!--Responses-->
+        {% if result %}
+        <textarea class="form-control" id="prompt-input" rows="3" readonly disabled>{{ result }}</textarea>
+        {% endif %}
+
+      </div>
       </form>
-        </div>
-</div>
-{% endblock %}
+    </div>
+  </div>
+  {% endblock %}
