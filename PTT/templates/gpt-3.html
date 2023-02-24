@@ -4,47 +4,56 @@
     <!--Settings page-->
     <div class="col-3 align-items-center border">
       <p class="h3">Settings:</p>
-      <form>
-        <!--Model Selction-->
+    
+      <form action = "/GPT-3/" method = "post">
         <div class="input-group mb-3">
+          <!--Model Selection-->
           <div class="input-group-prepend">
-            <label class="input-group-text" for="inputGroupSelect01">Model</label>
+            <label class="input-group-text" for="model_input">Model</label>
           </div>
-          <select class="custom-select" id="inputGroupSelect01">
+          <select class="custom-select" id="model_input" name = model>
             <option value="text-davinci-003">Davinci</option>
             <option value="text-curie-001">Curie</option>
             <option value="text-babbage-001">Babbage</option>
             <option value="text-ada-001">Ada</option>
           </select>
+
+            <div class="input-group-prepend">
+              <span class="input-group-text">max tokens</span>
+              <input type="number" name="max_tokens">
+            </div>
+
+          <input type="number" name="temp">
+          <input type="number" name="top_p">
+          <input type="number" name="frequency_penalty">
+          <input type="number" name="presence_penalty">
+    
+
+
+
         </div>
-
     </div>
-    <div class="col-4 align-items-center border">
-      <!--Input-->
-      <p class="h3">Input Prompt:</p>
 
-      <!--Prompt-->
+    <div class="col-4 align-items-center border">
+      <p class="h3">Input Prompt:</p>
+      <!--input contorls-->
       <div class="input-group mb-3">
-        <textarea class="form-control" id="prompt-input" rows="3"></textarea>
+        <textarea class="form-control" id="prompt-input" rows="3" name = "prompt"></textarea>
         <button class="btn btn-dark" type="button">Send</button>
       </div>
-
     </div>
 
     <div class="col-4 align-items-center border">
       <p class="h3">Output Completion:</p>
-
-
       <div class="input-group mb-3">
-
-
         <!--Responses-->
         {% if result %}
         <textarea class="form-control" id="prompt-input" rows="3" readonly disabled>{{ result }}</textarea>
         {% endif %}
-
       </div>
-      </form>
+    </form>
     </div>
+
+
   </div>
   {% endblock %}
