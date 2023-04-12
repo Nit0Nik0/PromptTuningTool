@@ -18,7 +18,6 @@ def GPT3():
         settings = request.form
         response = buildRequest(settings)
         return redirect(url_for("index", result=response.choices[0].text))     
-
     return render_template("gpt-3.html")
 
 app.run(host="0.0.0.0", port = 5001, debug=True)
