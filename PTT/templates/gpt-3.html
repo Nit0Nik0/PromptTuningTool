@@ -4,13 +4,13 @@
     <!--Settings page-->
     <div class="col-3 align-items-center border">
       <p class="h3">Settings:</p>
-    
       <form action = "/GPT-3/" method = "post">
-        <div class="input-group mb-3">
+        <div class="input-group mb-4">
           <!--Model Selection-->
           <div class="input-group-prepend">
             <label class="input-group-text" for="model_input">Model</label>
           </div>
+
           <select class="custom-select" id="model_input" name = model>
             <option value="text-davinci-003">Davinci</option>
             <option value="text-curie-001">Curie</option>
@@ -18,19 +18,29 @@
             <option value="text-ada-001">Ada</option>
           </select>
 
-            <div class="input-group-prepend">
+            <div class="input-group-text">
               <span class="input-group-text">max tokens</span>
               <input type="number" name="max_tokens">
             </div>
-
-          <input type="number" name="temp">
-          <input type="number" name="top_p">
-          <input type="number" name="frequency_penalty">
-          <input type="number" name="presence_penalty">
-    
-
-
-
+            
+            <div class="input-group-text">
+              <span class="input-group-text">temperature</span>
+              <input type="number" name="temp">
+            </div>
+            
+            <div class="input-group-text">
+              <span class="input-group-text">top_p</span>
+              <input type="number" name="top_p">
+            </div>
+            
+            <div class="input-group-text">
+              <span class="input-group-text">frequency penalty</span>  
+              <input type="number" name="frequency_penalty">
+            </div>
+            <div class="input-group-text">
+              <span class="input-group-text">presence penalty</span>  
+              <input type="number" name="presence_penalty">
+            </div>
         </div>
     </div>
 
