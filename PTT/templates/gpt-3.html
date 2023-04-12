@@ -4,6 +4,9 @@
     <!--Settings page-->
     <div class="col-3 align-items-center border">
       <p class="h3">Settings:</p>
+      
+        <a class = "h5" href="https://platform.openai.com/docs/api-reference/completions/create">Variables Explained</a>
+
       <form action = "/GPT-3/" method = "post">
         <div class="input-group mb-4">
           <!--Model Selection-->
@@ -20,26 +23,26 @@
 
             <div class="input-group-text">
               <span class="input-group-text">max tokens</span>
-              <input type="number" name="max_tokens">
+              <input type="number" name="max_tokens" value = 16>
             </div>
             
             <div class="input-group-text">
               <span class="input-group-text">temperature</span>
-              <input type="number" name="temp">
+              <input type="number" name="temp" value = 1>
             </div>
             
             <div class="input-group-text">
-              <span class="input-group-text">top_p</span>
-              <input type="number" name="top_p">
+              <span class="input-group-text">top p</span>
+              <input type="number" name="top_p" value = 1>
             </div>
             
             <div class="input-group-text">
               <span class="input-group-text">frequency penalty</span>  
-              <input type="number" name="frequency_penalty">
+              <input type="number" name="frequency_penalty" value = 0>
             </div>
             <div class="input-group-text">
               <span class="input-group-text">presence penalty</span>  
-              <input type="number" name="presence_penalty">
+              <input type="number" name="presence_penalty" value = 0>
             </div>
         </div>
     </div>
@@ -49,10 +52,10 @@
       <!--input contorls-->
       <div class="input-group mb-3">
         <textarea class="form-control" id="prompt-input" rows="3" name = "prompt"></textarea>
-        <button class="btn btn-dark" type="button">Send</button>
+        <button class="btn btn-dark" type="submit">Send</button>
       </div>
     </div>
-
+  </form>
     <div class="col-4 align-items-center border">
       <p class="h3">Output Completion:</p>
       <div class="input-group mb-3">
