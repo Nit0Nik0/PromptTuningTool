@@ -25,4 +25,13 @@ app.run(host="0.0.0.0", port = 5001, debug=True)
 
 # Helper Functions
 def buildRequest(settings):
-    return null;
+    #form names
+    print(settings)
+    """
+    model
+    max_tokens
+    temp
+    top_p
+    frequency_penalty
+    presence_penalty
+    """
